@@ -6,5 +6,9 @@ module.exports = {
     title: `Gospel Lense Blog`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    `gatsby-transformer-sharp`,
+  ],
 }
