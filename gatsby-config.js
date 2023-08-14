@@ -3,12 +3,19 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gospel Lense Blog`,
+    title: `Gospel Lens Blog`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`
+      }
+    }
   ],
 }
