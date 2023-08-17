@@ -18,6 +18,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
     },
-    "gatsby-plugin-slug"
+    "gatsby-plugin-slug",
+    "gatsby-transformer-sharp"
   ],
 }
