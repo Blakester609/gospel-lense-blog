@@ -3,7 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gospel Lens Blog`
+    title: `The Gospel Lens`,
+    subtitle: `A blog dedicated to seeing life experiences and current events through a perspective of beliefs of the Church of Jesus Christ of Latter-day Saints`
   },
   plugins: [
     "gatsby-plugin-image",
