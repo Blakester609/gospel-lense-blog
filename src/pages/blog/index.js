@@ -2,10 +2,17 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import mountainsImage from '../../images/chilean-mountains.jpeg'
 
 const BlogPage = ({ data }) => {
+    const headerData = {
+        title: "Here's My Blog",
+        subtitle: "",
+        backgroundImage: mountainsImage
+    }
+
     return (
-        <Layout pageTitle="My Blog Posts">
+        <Layout pageTitle="My Blog Posts" headerData={headerData}>
             {
                 data.allMdx.nodes.map((node) => (
                     <article key={node.id}>

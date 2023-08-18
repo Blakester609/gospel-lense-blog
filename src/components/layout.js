@@ -3,9 +3,9 @@ import { useState } from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import * as bootstrapBlog from './layout.module.css'
 import Button from 'react-bootstrap/Button'
-import templeImage from '../images/concepcion-chile-temple-273-main.jpg'
+import Header from './header'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, headerData, children }) => {
     const [show, setShow] = useState(false)
 
     const data = useStaticQuery(graphql`
@@ -18,8 +18,6 @@ const Layout = ({ pageTitle, children }) => {
                 }
             }
     `)
-
-
 
     
     return (
@@ -40,18 +38,7 @@ const Layout = ({ pageTitle, children }) => {
                         </div>  
                     </div>
                 </nav>
-                <header className={bootstrapBlog.masthead} style={{backgroundImage: `url(${templeImage})`}}>
-                {/* <div className={`${bootstrapBlog.container} ${bootstrapBlog.positionRelative} ${bootstrapBlog.px4} ${bootstrapBlog.pxLg5}`}>
-                    <div className={`${bootstrapBlog.row} ${bootstrapBlog.gx4} ${bootstrapBlog.gxLg5} ${bootstrapBlog.justifyContentCenter}`}>
-                        <div className={`${bootstrapBlog.colMd10} ${bootstrapBlog.colLg8} ${bootstrapBlog.colXl7}`}>
-                            <div className={`${bootstrapBlog.siteHeading}`}>
-                                <h1>{data.site.siteMetadata.title}</h1>
-                                <span className={`${bootstrapBlog.subheading}`}>{data.site.siteMetadata.subtitle}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                </header>
+                <Header headerData={headerData}/>
                 <main>
                     <h1>{pageTitle}</h1>
                     {children}
