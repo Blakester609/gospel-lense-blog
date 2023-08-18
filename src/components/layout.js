@@ -39,10 +39,14 @@ const Layout = ({ pageTitle, headerData, children }) => {
                     </div>
                 </nav>
                 <Header headerData={headerData}/>
-                <main>
-                    <h1>{pageTitle}</h1>
-                    {children}
-                </main>
+                <div className={`${bootstrapBlog.container} ${bootstrapBlog.px4} ${bootstrapBlog.pxLg5}`}>
+                    <div className={`${bootstrapBlog.row} ${bootstrapBlog.gx4} ${bootstrapBlog.justifyContentCenter}`}>
+                        <div className={`${bootstrapBlog.colMd10} ${bootstrapBlog.colLg8} ${bootstrapBlog.colXl7}`}>
+                            <h1>{pageTitle}</h1>
+                            {children}
+                        </div>
+                    </div>
+                </div>
             </div>
         </body>
         
