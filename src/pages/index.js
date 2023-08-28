@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from '../components/layout'
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Seo from '../components/seo'
 import templeImage from '../images/concepcion-chile-temple-273-main.jpg'
 
@@ -23,9 +23,9 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout pageTitle="Home Page" headerData={headerData}>
-        <h1>The Gospel Lense</h1>
-        <p>I'm making this by following the Gatsby Tutorial.</p>
+    <Layout pageTitle="" headerData={headerData}>
+      <h4>Welcome! Check out my <Link to="/blog" style={{color: "#4d94d5", textDecoration: 'underline'}}>blog posts</Link> </h4>
+      <p>Or, learn more about me by going to the <Link to="/about" style={{color: "#4d94d5", textDecoration: 'underline'}}>about page</Link></p>
     </Layout>
   )
 }

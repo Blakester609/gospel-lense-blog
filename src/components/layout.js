@@ -4,6 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import * as bootstrapBlog from './layout.module.css'
 import Button from 'react-bootstrap/Button'
 import Header from './header'
+import Footer from './footer'
 
 const Layout = ({ pageTitle, headerData, children }) => {
     const [show, setShow] = useState(false)
@@ -47,6 +48,7 @@ const Layout = ({ pageTitle, headerData, children }) => {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         </body>
         
