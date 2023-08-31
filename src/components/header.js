@@ -1,14 +1,11 @@
 import * as React from 'react'
 import * as bootstrapBlog from './layout.module.css'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Header = ( { headerData } ) => {
-    const someImage = headerData.backgroundImage
+
 
     return (
-        <header className={`${bootstrapBlog.masthead}`}>
-            {/* <GatsbyImage image={someImage} alt={"An image"}/> */}
-            {console.log(someImage)}
+        <header className={`${bootstrapBlog.masthead}`} style={{backgroundImage: `url(${headerData.backgroundImage})`}}>
             <div className={`${bootstrapBlog.container} ${bootstrapBlog.positionRelative} ${bootstrapBlog.px4} ${bootstrapBlog.pxLg5}`}>
                 <div className={`${bootstrapBlog.row} ${bootstrapBlog.gx4} ${bootstrapBlog.gxLg5} ${bootstrapBlog.justifyContentCenter}`}>
                     <div className={`${bootstrapBlog.colMd10} ${bootstrapBlog.colLg8} ${bootstrapBlog.colXl7}`}> 

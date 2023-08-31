@@ -5,27 +5,22 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BlogPost = ({data, children}) => {
-    const image = getImage(data.mdx.frontmatter.hero_image)
+    const image = getImage(data.mdx.frontmatter.image)
 
     const headerData = {
       title: data.mdx.frontmatter.title,
       subtitle: `Posted: ${data.mdx.frontmatter.date}`,
-      backgroundImage: image
+      backgroundImage: image.images.fallback.src
     }
 
     return (
         <Layout pageTitle={data.mdx.frontmatter.title} headerData={headerData}>
-            <p>Posted: {data.mdx.frontmatter.date}</p>
+            <h5>Posted: {data.mdx.frontmatter.date}</h5>
+            <p>{data.mdx.frontmatter.subtitle_2}</p>
             <GatsbyImage 
                 image={image}
-                alt={data.mdx.frontmatter.hero_image_alt}
+                alt={data.mdx.frontmatter.image_alt}
             />
-            <p>
-                Photo Credit:{" "}
-                <a href={data.mdx.frontmatter.hero_image_credit_link}>
-                    {data.mdx.frontmatter.hero_image_credit_text}
-                </a>
-            </p>
             {children}
         </Layout>
     )
@@ -38,10 +33,9 @@ query ($id: String) {
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
-        hero_image_alt
-        hero_image_credit_link
-        hero_image_credit_text
-        hero_image {
+        image_alt
+        subtitle_2
+        image {
           childImageSharp {
             gatsbyImageData
           }
