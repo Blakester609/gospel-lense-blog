@@ -10,7 +10,7 @@ const BlogPost = ({data, children}) => {
     const headerData = {
       title: data.mdx.frontmatter.title,
       subtitle: `Posted: ${data.mdx.frontmatter.date}`,
-      backgroundImage: image.images.fallback.src
+      backgroundImage: image
     }
 
     return (

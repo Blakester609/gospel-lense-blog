@@ -24,13 +24,13 @@ const Layout = ({ pageTitle, headerData, children }) => {
     return (
         <body>
             <div>
-                <nav className={`${bootstrapBlog.navbar} ${bootstrapBlog.navbarExpandLg} ${bootstrapBlog.navbarLight}`} id={bootstrapBlog.mainNav}>
+                <nav className={`${bootstrapBlog.navbar} ${bootstrapBlog.navbarExpandLg}`} id={bootstrapBlog.mainNav}>
                     <div className={`${bootstrapBlog.container} ${bootstrapBlog.px4} ${bootstrapBlog.pxLg5}`}>
                         <Link to="/" className={bootstrapBlog.navbarBrand}>{data.site.siteMetadata.title}</Link>
                         <Button onClick={() => setShow(!show)} className={`${bootstrapBlog.navbarToggler}`}>
                             Menu
                         </Button>
-                        <div className={`${bootstrapBlog.collapse} ${bootstrapBlog.navbarCollapse} ${show ? bootstrapBlog.show : ""}`} id={bootstrapBlog.navbarResponsive}>
+                        <div className={`${bootstrapBlog.collapse} ${bootstrapBlog.navbarCollapse} ${show ? bootstrapBlog.show : ""}`}>
                             <ul className={`${bootstrapBlog.navbarNav} ${bootstrapBlog.msAuto} ${bootstrapBlog.py4} ${bootstrapBlog.pyLg0}`}>
                                 <li className={bootstrapBlog.navItem}><Link to="/" className={`${bootstrapBlog.navLink} ${bootstrapBlog.pxLg3} ${bootstrapBlog.py3} ${bootstrapBlog.pyLg4}`}>Home</Link></li>
                                 <li className={bootstrapBlog.navItem}><Link to="/about" className={`${bootstrapBlog.navLink} ${bootstrapBlog.pxLg3} ${bootstrapBlog.py3} ${bootstrapBlog.pyLg4}`}>About</Link></li>

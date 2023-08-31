@@ -11,7 +11,7 @@ const Footer = () => {
                         Follow me on {` `}
                             <li className={`${bootstrapBlog.listInlineItem}`}>
                                 <a href="https://www.instagram.com/the.true.blake.doty/">
-                                    <span style={{color: "#4d94d5"}} className={`${bootstrapBlog.faStack} ${bootstrapBlog.faLg}`}>
+                                    <span style={{color: "#4d94d5"}}>
                                         Instagram
                                     </span>
                                 </a>
